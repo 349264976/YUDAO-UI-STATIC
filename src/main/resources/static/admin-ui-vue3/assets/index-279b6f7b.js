@@ -1,0 +1,1 @@
+import{a as e}from"./index-a7ef0ded.js";const s=()=>e.get({url:"/system/menu/list-all-simple"}),t=s=>e.get({url:"/system/menu/list",params:s}),a=s=>e.get({url:"/system/menu/get?id="+s}),m=s=>e.post({url:"/system/menu/create",data:s}),u=s=>e.put({url:"/system/menu/update",data:s}),l=s=>e.delete({url:"/system/menu/delete?id="+s});export{a,m as c,l as d,t as g,s as l,u};

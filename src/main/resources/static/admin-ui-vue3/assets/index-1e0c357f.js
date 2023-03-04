@@ -1,0 +1,1 @@
+import{a}from"./index-a7ef0ded.js";const t=()=>a.get({url:"/infra/data-source-config/list"}),e=t=>a.get({url:"/infra/data-source-config/get?id="+t}),r=t=>a.post({url:"/infra/data-source-config/create",data:t}),i=t=>a.put({url:"/infra/data-source-config/update",data:t}),o=t=>a.delete({url:"/infra/data-source-config/delete?id="+t});export{e as a,r as c,o as d,t as g,i as u};

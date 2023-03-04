@@ -1,0 +1,1 @@
+import{_ as r}from"./_plugin-vue_export-helper-1b428a4d.js";import{o as e,i as n}from"./runtime-core.esm-bundler-ccc21fcd.js";const o=r({},[["render",function(r,o){return e(),n("span",null,"开发中")}]]);export{o as default};

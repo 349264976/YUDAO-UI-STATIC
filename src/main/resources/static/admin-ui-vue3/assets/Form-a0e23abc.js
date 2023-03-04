@@ -1,0 +1,1 @@
+import{_}from"./Form.vue_vue_type_style_index_0_scoped_f983cb9f_lang-54d674bd.js";import{_ as e}from"./_plugin-vue_export-helper-1b428a4d.js";const o=e(_,[["__scopeId","data-v-f983cb9f"]]);export{o as _};
