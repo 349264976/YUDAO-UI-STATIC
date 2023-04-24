@@ -1,0 +1,1 @@
+import{I as t}from"./index-c4f38b81.js";import{a as e,H as a,o,f as s,e as n,u as c}from"./index-185fe65d.js";const l=e({name:"ReportGoview"}),i=e({...l,setup(p){const r=a("http://127.0.0.1:3000");return(u,_)=>(o(),s("div",null,[n(c(t),{src:r.value},null,8,["src"])]))}});export{i as default};

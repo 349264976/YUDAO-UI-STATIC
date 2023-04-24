@@ -1,0 +1,1 @@
+import{I as o}from"./index-c4f38b81.js";import{a as e,H as r,f9 as s,o as a,f as c,e as n,u as l}from"./index-185fe65d.js";const p=e({name:"ReportJmreport"}),d=e({...p,setup(m){const t=r("http://localhost:48080/jmreport/list?token="+s());return(f,u)=>(a(),c("div",null,[n(l(o),{src:t.value},null,8,["src"])]))}});export{d as default};

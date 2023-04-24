@@ -1,0 +1,1 @@
+import{I as a}from"./index-c4f38b81.js";import{a as e,H as t,o,f as s,e as n,u as c}from"./index-185fe65d.js";const l=e({name:"InfraDruid"}),p=e({...l,setup(u){const r=t("http://localhost:48080/druid/index.html");return(f,m)=>(o(),s("div",null,[n(c(a),{src:r.value},null,8,["src"])]))}});export{p as default};
