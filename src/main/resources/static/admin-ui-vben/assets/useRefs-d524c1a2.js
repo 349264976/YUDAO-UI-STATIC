@@ -1,1 +1,0 @@
-import{H as r,d0 as t}from"./index-185fe65d.js";var u=function(){var e=r(new Map),n=function(s){return function(f){e.value.set(s,f)}};return t(function(){e.value=new Map}),[n,e]};const i=u;export{i as u};

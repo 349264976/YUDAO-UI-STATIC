@@ -1,47 +1,38 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[32],{
 
-/***/ "./node_modules/core-js/internals/engine-ff-version.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/core-js/internals/engine-ff-version.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("var userAgent = __webpack_require__(/*! ../internals/engine-user-agent */ \"./node_modules/core-js/internals/engine-user-agent.js\");\n\nvar firefox = userAgent.match(/firefox\\/(\\d+)/i);\n\nmodule.exports = !!firefox && +firefox[1];\n\n\n//# sourceURL=webpack:///./node_modules/core-js/internals/engine-ff-version.js?");
-
-/***/ }),
-
-/***/ "./node_modules/core-js/internals/engine-is-ie-or-edge.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/core-js/internals/engine-is-ie-or-edge.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("var UA = __webpack_require__(/*! ../internals/engine-user-agent */ \"./node_modules/core-js/internals/engine-user-agent.js\");\n\nmodule.exports = /MSIE|Trident/.test(UA);\n\n\n//# sourceURL=webpack:///./node_modules/core-js/internals/engine-is-ie-or-edge.js?");
-
-/***/ }),
-
-/***/ "./node_modules/core-js/internals/engine-webkit-version.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/core-js/internals/engine-webkit-version.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("var userAgent = __webpack_require__(/*! ../internals/engine-user-agent */ \"./node_modules/core-js/internals/engine-user-agent.js\");\n\nvar webkit = userAgent.match(/AppleWebKit\\/(\\d+)\\./);\n\nmodule.exports = !!webkit && +webkit[1];\n\n\n//# sourceURL=webpack:///./node_modules/core-js/internals/engine-webkit-version.js?");
-
-/***/ }),
-
-/***/ "./node_modules/core-js/modules/es.array.sort.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/core-js/modules/es.array.sort.js ***!
-  \*******************************************************/
+/***/ "./node_modules/cache-loader/dist/cjs.js?!./node_modules/babel-loader/lib/index.js!./node_modules/cache-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./src/views/redirect.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/views/redirect.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar $ = __webpack_require__(/*! ../internals/export */ \"./node_modules/core-js/internals/export.js\");\nvar uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ \"./node_modules/core-js/internals/function-uncurry-this.js\");\nvar aCallable = __webpack_require__(/*! ../internals/a-callable */ \"./node_modules/core-js/internals/a-callable.js\");\nvar toObject = __webpack_require__(/*! ../internals/to-object */ \"./node_modules/core-js/internals/to-object.js\");\nvar lengthOfArrayLike = __webpack_require__(/*! ../internals/length-of-array-like */ \"./node_modules/core-js/internals/length-of-array-like.js\");\nvar deletePropertyOrThrow = __webpack_require__(/*! ../internals/delete-property-or-throw */ \"./node_modules/core-js/internals/delete-property-or-throw.js\");\nvar toString = __webpack_require__(/*! ../internals/to-string */ \"./node_modules/core-js/internals/to-string.js\");\nvar fails = __webpack_require__(/*! ../internals/fails */ \"./node_modules/core-js/internals/fails.js\");\nvar internalSort = __webpack_require__(/*! ../internals/array-sort */ \"./node_modules/core-js/internals/array-sort.js\");\nvar arrayMethodIsStrict = __webpack_require__(/*! ../internals/array-method-is-strict */ \"./node_modules/core-js/internals/array-method-is-strict.js\");\nvar FF = __webpack_require__(/*! ../internals/engine-ff-version */ \"./node_modules/core-js/internals/engine-ff-version.js\");\nvar IE_OR_EDGE = __webpack_require__(/*! ../internals/engine-is-ie-or-edge */ \"./node_modules/core-js/internals/engine-is-ie-or-edge.js\");\nvar V8 = __webpack_require__(/*! ../internals/engine-v8-version */ \"./node_modules/core-js/internals/engine-v8-version.js\");\nvar WEBKIT = __webpack_require__(/*! ../internals/engine-webkit-version */ \"./node_modules/core-js/internals/engine-webkit-version.js\");\n\nvar test = [];\nvar nativeSort = uncurryThis(test.sort);\nvar push = uncurryThis(test.push);\n\n// IE8-\nvar FAILS_ON_UNDEFINED = fails(function () {\n  test.sort(undefined);\n});\n// V8 bug\nvar FAILS_ON_NULL = fails(function () {\n  test.sort(null);\n});\n// Old WebKit\nvar STRICT_METHOD = arrayMethodIsStrict('sort');\n\nvar STABLE_SORT = !fails(function () {\n  // feature detection can be too slow, so check engines versions\n  if (V8) return V8 < 70;\n  if (FF && FF > 3) return;\n  if (IE_OR_EDGE) return true;\n  if (WEBKIT) return WEBKIT < 603;\n\n  var result = '';\n  var code, chr, value, index;\n\n  // generate an array with more 512 elements (Chakra and old V8 fails only in this case)\n  for (code = 65; code < 76; code++) {\n    chr = String.fromCharCode(code);\n\n    switch (code) {\n      case 66: case 69: case 70: case 72: value = 3; break;\n      case 68: case 71: value = 4; break;\n      default: value = 2;\n    }\n\n    for (index = 0; index < 47; index++) {\n      test.push({ k: chr + index, v: value });\n    }\n  }\n\n  test.sort(function (a, b) { return b.v - a.v; });\n\n  for (index = 0; index < test.length; index++) {\n    chr = test[index].k.charAt(0);\n    if (result.charAt(result.length - 1) !== chr) result += chr;\n  }\n\n  return result !== 'DGBEFHACIJK';\n});\n\nvar FORCED = FAILS_ON_UNDEFINED || !FAILS_ON_NULL || !STRICT_METHOD || !STABLE_SORT;\n\nvar getSortCompare = function (comparefn) {\n  return function (x, y) {\n    if (y === undefined) return -1;\n    if (x === undefined) return 1;\n    if (comparefn !== undefined) return +comparefn(x, y) || 0;\n    return toString(x) > toString(y) ? 1 : -1;\n  };\n};\n\n// `Array.prototype.sort` method\n// https://tc39.es/ecma262/#sec-array.prototype.sort\n$({ target: 'Array', proto: true, forced: FORCED }, {\n  sort: function sort(comparefn) {\n    if (comparefn !== undefined) aCallable(comparefn);\n\n    var array = toObject(this);\n\n    if (STABLE_SORT) return comparefn === undefined ? nativeSort(array) : nativeSort(array, comparefn);\n\n    var items = [];\n    var arrayLength = lengthOfArrayLike(array);\n    var itemsLength, index;\n\n    for (index = 0; index < arrayLength; index++) {\n      if (index in array) push(items, array[index]);\n    }\n\n    internalSort(items, getSortCompare(comparefn));\n\n    itemsLength = lengthOfArrayLike(items);\n    index = 0;\n\n    while (index < itemsLength) array[index] = items[index++];\n    while (index < arrayLength) deletePropertyOrThrow(array, index++);\n\n    return array;\n  }\n});\n\n\n//# sourceURL=webpack:///./node_modules/core-js/modules/es.array.sort.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n__webpack_require__(/*! core-js/modules/es.regexp.exec.js */ \"./node_modules/core-js/modules/es.regexp.exec.js\");\n__webpack_require__(/*! core-js/modules/es.string.replace.js */ \"./node_modules/core-js/modules/es.string.replace.js\");\nvar _default = {\n  created: function created() {\n    var _this$$route = this.$route,\n      params = _this$$route.params,\n      query = _this$$route.query;\n    var path = params.path;\n    this.$router.replace({\n      path: '/' + path,\n      query: query\n    });\n  },\n  render: function render(h) {\n    return h(); // avoid warning message\n  }\n};\nexports.default = _default;\n\n//# sourceURL=webpack:///./src/views/redirect.vue?./node_modules/cache-loader/dist/cjs.js??ref--13-0!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options");
+
+/***/ }),
+
+/***/ "./src/views/redirect.vue":
+/*!********************************!*\
+  !*** ./src/views/redirect.vue ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _redirect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./redirect.vue?vue&type=script&lang=js& */ \"./src/views/redirect.vue?vue&type=script&lang=js&\");\n/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _redirect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if([\"default\"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _redirect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));\n/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ \"./node_modules/vue-loader/lib/runtime/componentNormalizer.js\");\nvar render, staticRenderFns\n\n\n\n\n/* normalize component */\n\nvar component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(\n  _redirect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  render,\n  staticRenderFns,\n  false,\n  null,\n  null,\n  null\n  \n)\n\n/* hot reload */\nif (false) { var api; }\ncomponent.options.__file = \"src/views/redirect.vue\"\n/* harmony default export */ __webpack_exports__[\"default\"] = (component.exports);\n\n//# sourceURL=webpack:///./src/views/redirect.vue?");
+
+/***/ }),
+
+/***/ "./src/views/redirect.vue?vue&type=script&lang=js&":
+/*!*********************************************************!*\
+  !*** ./src/views/redirect.vue?vue&type=script&lang=js& ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_cache_loader_dist_cjs_js_ref_13_0_node_modules_babel_loader_lib_index_js_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_redirect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/cache-loader/dist/cjs.js??ref--13-0!../../node_modules/babel-loader/lib!../../node_modules/cache-loader/dist/cjs.js??ref--1-0!../../node_modules/vue-loader/lib??vue-loader-options!./redirect.vue?vue&type=script&lang=js& */ \"./node_modules/cache-loader/dist/cjs.js?!./node_modules/babel-loader/lib/index.js!./node_modules/cache-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./src/views/redirect.vue?vue&type=script&lang=js&\");\n/* harmony import */ var _node_modules_cache_loader_dist_cjs_js_ref_13_0_node_modules_babel_loader_lib_index_js_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_redirect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_cache_loader_dist_cjs_js_ref_13_0_node_modules_babel_loader_lib_index_js_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_redirect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);\n/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_cache_loader_dist_cjs_js_ref_13_0_node_modules_babel_loader_lib_index_js_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_redirect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if([\"default\"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_cache_loader_dist_cjs_js_ref_13_0_node_modules_babel_loader_lib_index_js_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_redirect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));\n /* harmony default export */ __webpack_exports__[\"default\"] = (_node_modules_cache_loader_dist_cjs_js_ref_13_0_node_modules_babel_loader_lib_index_js_node_modules_cache_loader_dist_cjs_js_ref_1_0_node_modules_vue_loader_lib_index_js_vue_loader_options_redirect_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); \n\n//# sourceURL=webpack:///./src/views/redirect.vue?");
 
 /***/ })
 

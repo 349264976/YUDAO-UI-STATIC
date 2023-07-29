@@ -1,1 +1,0 @@
-import{_ as e}from"./XTextButton.vue_vue_type_style_index_0_scoped_0fcea4df_lang-41ab76b9.js";import{_}from"./_plugin-vue_export-helper-1b428a4d.js";const o=_(e,[["__scopeId","data-v-0fcea4df"]]);export{o as _};
