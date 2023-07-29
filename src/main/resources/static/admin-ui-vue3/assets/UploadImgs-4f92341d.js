@@ -1,0 +1,1 @@
+import{a as t,__tla as _}from"./UploadFile.vue_vue_type_style_index_0_scoped_5a2639f8_lang-77946e64.js";import{_ as r}from"./_plugin-vue_export-helper-1b428a4d.js";let a,e=Promise.all([(()=>{try{return _}catch{}})()]).then(async()=>{a=r(t,[["__scopeId","data-v-56b4301a"]])});export{a as U,e as __tla};

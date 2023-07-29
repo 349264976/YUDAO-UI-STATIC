@@ -1,0 +1,1 @@
+import{ab as r,__tla as l}from"./index-0f589822.js";let t,e,_=Promise.all([(()=>{try{return l}catch{}})()]).then(async()=>{t=a=>r.get({url:"/trade/order/page",params:a}),e=a=>r.get({url:"/trade/order/get-detail?id="+a})});export{_ as __tla,t as a,e as g};

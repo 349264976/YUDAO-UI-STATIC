@@ -1,0 +1,1 @@
+import{ab as t,__tla as u}from"./index-0f589822.js";let r,s,e,p,l=Promise.all([(()=>{try{return u}catch{}})()]).then(async()=>{p=a=>t.put({url:"/mp/user/update",data:a}),s=a=>t.get({url:"/mp/user/get?id="+a}),r=a=>t.get({url:"/mp/user/page",params:a}),e=a=>t.post({url:"/mp/tag/sync?accountId="+a})});export{l as __tla,r as a,s as g,e as s,p as u};

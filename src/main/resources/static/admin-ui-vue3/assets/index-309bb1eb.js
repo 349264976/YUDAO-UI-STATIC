@@ -1,0 +1,1 @@
+import{ab as t,__tla as p}from"./index-0f589822.js";let l,r,s,u=Promise.all([(()=>{try{return p}catch{}})()]).then(async()=>{r=e=>t.get({url:"/mp/free-publish/page",params:e}),l=(e,a)=>t.delete({url:"/mp/free-publish/delete?accountId="+e+"&articleId="+a}),s=(e,a)=>t.post({url:"/mp/free-publish/submit?accountId="+e+"&mediaId="+a})});export{u as __tla,l as d,r as g,s};
