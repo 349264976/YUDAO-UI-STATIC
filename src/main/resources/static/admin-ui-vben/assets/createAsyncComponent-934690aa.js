@@ -1,0 +1,1 @@
+import{ff as l,n as p,bm as d,fg as u}from"./index-8b526734.js";function y(e,n={}){const{size:o="small",delay:t=100,timeout:s=3e4,loading:a=!1,retry:r=!0}=n;return l({loader:e,loadingComponent:a?p(d,{spinning:!0,size:o},null):void 0,timeout:s,delay:t,onError:r?(i,f,m,c)=>{i.message.match(/fetch/)&&c<=3?f():m()}:u})}export{y as c};

@@ -1,0 +1,1 @@
+import{I as r}from"./index-d7db7ee3.js";import{a,z as n,o,h as s,n as t,k as c}from"./index-8b526734.js";const _=a({__name:"index",setup(l){const e=n("http://skywalking.shop.iocoder.cn");return(p,m)=>(o(),s("div",null,[t(c(r),{src:e.value},null,8,["src"])]))}});export{_ as default};

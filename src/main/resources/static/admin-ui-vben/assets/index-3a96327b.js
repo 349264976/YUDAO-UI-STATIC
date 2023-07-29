@@ -1,0 +1,1 @@
+import{cm as r}from"./index-8b526734.js";function m(e){return r.delete({url:"/bpm/form/delete?id="+e})}function o(e){return r.get({url:"/bpm/form/get?id="+e})}function l(e){return r.get({url:"/bpm/form/page",params:e})}function n(){return r.get({url:"/bpm/form/list-all-simple"})}export{l as a,n as b,m as d,o as g};

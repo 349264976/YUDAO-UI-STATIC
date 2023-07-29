@@ -1,0 +1,1 @@
+import{z as r,dd as t}from"./index-8b526734.js";var u=function(){var e=r(new Map),n=function(s){return function(f){e.value.set(s,f)}};return t(function(){e.value=new Map}),[n,e]};const i=u;export{i as u};

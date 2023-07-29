@@ -1,0 +1,1 @@
+import{I as a}from"./index-d7db7ee3.js";import{a as r,z as o,o as s,h as n,n as t,k as c}from"./index-8b526734.js";const m=r({__name:"index",setup(p){const e=o("http://api-dashboard.yudao.iocoder.cn/swagger-ui");return(u,d)=>(s(),n("div",null,[t(c(a),{src:e.value},null,8,["src"])]))}});export{m as default};

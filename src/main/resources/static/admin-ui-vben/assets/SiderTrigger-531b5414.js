@@ -1,0 +1,1 @@
+import{a as i,aj as l,o as t,h as u,k as e,j as s,fP as d,fQ as p,aC as f}from"./index-8b526734.js";const m=i({name:"SiderTrigger",__name:"SiderTrigger",setup(g){const{getCollapsed:n,toggleCollapsed:o}=l();return(c,a)=>(t(),u("div",{onClick:a[0]||(a[0]=f((...r)=>e(o)&&e(o)(...r),["stop"]))},[e(n)?(t(),s(e(d),{key:0})):(t(),s(e(p),{key:1}))]))}});export{m as default};

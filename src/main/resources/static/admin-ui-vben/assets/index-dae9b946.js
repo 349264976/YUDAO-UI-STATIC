@@ -1,0 +1,1 @@
+import{I as a}from"./index-d7db7ee3.js";import{a as r,z as o,o as n,h as s,n as t,k as c}from"./index-8b526734.js";const u=r({__name:"index",setup(d){const e=o("http://api-dashboard.yudao.iocoder.cn/druid/index.html");return(i,l)=>(n(),s("div",null,[t(c(a),{src:e.value},null,8,["src"])]))}});export{u as default};

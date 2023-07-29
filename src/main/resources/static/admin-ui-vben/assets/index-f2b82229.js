@@ -1,0 +1,1 @@
+import{I as r}from"./index-d7db7ee3.js";import{a,z as n,o as s,h as t,n as o,k as c}from"./index-8b526734.js";const f=a({__name:"index",setup(l){const e=n("http://127.0.0.1:3000");return(m,p)=>(s(),t("div",null,[o(c(r),{src:e.value},null,8,["src"])]))}});export{f as default};
